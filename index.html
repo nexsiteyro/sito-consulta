@@ -3,2669 +3,721 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
+    <meta name="robots"
+          content="noindex, nofollow">
 
-<title>
-Consulta Giovanile Castronuovo di Sant'Andrea (PZ)
-</title>
+    <meta name="description"
+          content="Sito ufficiale della Consulta Giovanile di Castronuovo di Sant'Andrea.">
 
+    <title>
+        Consulta Giovanile | Castronuovo di Sant'Andrea
+    </title>
 
-<meta name="description"
-content="Sito ufficiale della Consulta Giovanile di Castronuovo di Sant'Andrea. Uno spazio dedicato ai giovani, alla partecipazione attiva e alla crescita della comunità.">
+    <!-- ==================================================
+         GOOGLE FONT
+    =================================================== -->
 
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-<meta name="keywords"
-content="Consulta Giovanile, Castronuovo di Sant'Andrea, Giovani, Basilicata, Comune, Eventi">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-
-<meta name="author"
-content="Consulta Giovanile Castronuovo di Sant'Andrea">
-
-
-
-<!-- OPEN GRAPH -->
-
-<meta property="og:title"
-content="Consulta Giovanile Castronuovo di Sant'Andrea">
-
-
-<meta property="og:description"
-content="Partecipa alle attività della Consulta Giovanile.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
 
-<meta property="og:type"
-content="website">
+    <style>
+
+        /* ==================================================
+           RESET
+        ================================================== */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
 
 
-<meta property="og:image"
-content="assets/img/logo.png">
+        html {
+
+            scroll-behavior: smooth;
+
+        }
 
 
-<meta property="og:locale"
-content="it_IT">
+        /* ==================================================
+           BODY
+        ================================================== */
+
+        body {
+
+            min-height: 100vh;
+
+            min-height: 100svh;
+
+            font-family: "Poppins", sans-serif;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #071d35 0%,
+                    #0d477d 55%,
+                    #1683a8 100%
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow-x: hidden;
+
+            position: relative;
+
+        }
 
 
+        /* ==================================================
+           DECORAZIONI SFONDO
+        ================================================== */
 
-<!-- FAVICON -->
+        body::before {
 
-<link rel="icon"
-href="assets/img/favicon.png">
+            content: "";
 
+            position: fixed;
 
+            width: 600px;
 
-<!-- GOOGLE FONT -->
+            height: 600px;
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+            top: -300px;
 
+            right: -200px;
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+            border-radius: 50%;
 
+            background:
+                rgba(255,255,255,.06);
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-rel="stylesheet">
+            pointer-events: none;
 
-
-
-<!-- FONT AWESOME -->
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        }
 
 
+        body::after {
 
-<!-- CSS -->
+            content: "";
 
-<link rel="stylesheet"
-href="style.css">
+            position: fixed;
 
+            width: 500px;
+
+            height: 500px;
+
+            bottom: -300px;
+
+            left: -200px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,.05);
+
+            pointer-events: none;
+
+        }
+
+
+        /* ==================================================
+           CONTENITORE PRINCIPALE
+        ================================================== */
+
+        .maintenance {
+
+            width: 100%;
+
+            max-width: 900px;
+
+            padding: 50px 25px;
+
+            text-align: center;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        /* ==================================================
+           LOGO
+        ================================================== */
+
+        .logo {
+
+            width: 115px;
+
+            height: 115px;
+
+            object-fit: contain;
+
+            display: block;
+
+            margin: 0 auto 30px;
+
+            filter:
+                drop-shadow(
+                    0 15px 25px
+                    rgba(0,0,0,.25)
+                );
+
+            animation:
+                logoAppear .8s ease forwards;
+
+        }
+
+
+        /* ==================================================
+           BADGE
+        ================================================== */
+
+        .badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            padding: 9px 18px;
+
+            border-radius: 50px;
+
+            background:
+                rgba(255,255,255,.12);
+
+            border:
+                1px solid
+                rgba(255,255,255,.16);
+
+            backdrop-filter: blur(12px);
+
+            -webkit-backdrop-filter: blur(12px);
+
+            font-size: .82rem;
+
+            font-weight: 500;
+
+            letter-spacing: .3px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        /* ==================================================
+           PALLINO BADGE
+        ================================================== */
+
+        .badge-dot {
+
+            width: 8px;
+
+            height: 8px;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            background: #7ee0a5;
+
+            box-shadow:
+                0 0 0 5px
+                rgba(126,224,165,.12);
+
+            animation:
+                pulse 2s infinite;
+
+        }
+
+
+        /* ==================================================
+           TITOLO
+        ================================================== */
+
+        h1 {
+
+            font-size:
+                clamp(
+                    2.4rem,
+                    6vw,
+                    4.7rem
+                );
+
+            line-height: 1.05;
+
+            font-weight: 800;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        h1 span {
+
+            display: block;
+
+            color: #bdefff;
+
+        }
+
+
+        /* ==================================================
+           DESCRIZIONE
+        ================================================== */
+
+        .description {
+
+            max-width: 680px;
+
+            margin: 0 auto;
+
+            font-size: 1.05rem;
+
+            line-height: 1.8;
+
+            color:
+                rgba(255,255,255,.82);
+
+        }
+
+
+        /* ==================================================
+           MESSAGGIO FINALE
+        ================================================== */
+
+        .coming-soon {
+
+            margin-top: 42px;
+
+            font-size: .95rem;
+
+            color:
+                rgba(255,255,255,.68);
+
+        }
+
+
+        .coming-soon strong {
+
+            display: block;
+
+            margin-top: 7px;
+
+            color: #ffffff;
+
+            font-size: 1.05rem;
+
+            font-weight: 600;
+
+        }
+
+
+        /* ==================================================
+           FOOTER
+        ================================================== */
+
+        footer {
+
+            margin-top: 65px;
+
+            padding-top: 25px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,.12);
+
+            font-size: .78rem;
+
+            line-height: 1.6;
+
+            color:
+                rgba(255,255,255,.5);
+
+        }
+
+
+        /* ==================================================
+           ANIMAZIONI
+        ================================================== */
+
+        @keyframes logoAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(20px)
+                    scale(.9);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+
+            }
+
+        }
+
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+
+                opacity: 1;
+
+                transform: scale(1);
+
+            }
+
+            50% {
+
+                opacity: .45;
+
+                transform: scale(.75);
+
+            }
+
+        }
+
+
+        /* ==================================================
+           TABLET
+        ================================================== */
+
+        @media (max-width: 768px) {
+
+            .maintenance {
+
+                padding:
+                    45px 25px;
+
+            }
+
+
+            .logo {
+
+                width: 100px;
+
+                height: 100px;
+
+                margin-bottom: 27px;
+
+            }
+
+
+            h1 {
+
+                font-size: 3rem;
+
+                letter-spacing: -1.5px;
+
+            }
+
+
+            .description {
+
+                font-size: .98rem;
+
+                line-height: 1.75;
+
+            }
+
+
+            footer {
+
+                margin-top: 55px;
+
+            }
+
+        }
+
+
+        /* ==================================================
+           MOBILE
+        ================================================== */
+
+        @media (max-width: 600px) {
+
+            body {
+
+                min-height: 100svh;
+
+            }
+
+
+            .maintenance {
+
+                padding:
+                    35px 20px;
+
+            }
+
+
+            .logo {
+
+                width: 85px;
+
+                height: 85px;
+
+                margin-bottom: 23px;
+
+            }
+
+
+            .badge {
+
+                font-size: .74rem;
+
+                padding:
+                    8px 14px;
+
+                margin-bottom: 22px;
+
+            }
+
+
+            h1 {
+
+                font-size: 2.3rem;
+
+                line-height: 1.08;
+
+                letter-spacing: -1px;
+
+                margin-bottom: 20px;
+
+            }
+
+
+            .description {
+
+                font-size: .9rem;
+
+                line-height: 1.7;
+
+            }
+
+
+            .coming-soon {
+
+                margin-top: 32px;
+
+                font-size: .88rem;
+
+            }
+
+
+            .coming-soon strong {
+
+                font-size: .98rem;
+
+            }
+
+
+            footer {
+
+                margin-top: 45px;
+
+                padding-top: 20px;
+
+                font-size: .72rem;
+
+            }
+
+        }
+
+
+        /* ==================================================
+           SMARTPHONE PICCOLI
+        ================================================== */
+
+        @media (max-width: 380px) {
+
+            .maintenance {
+
+                padding:
+                    25px 17px;
+
+            }
+
+
+            .logo {
+
+                width: 75px;
+
+                height: 75px;
+
+            }
+
+
+            h1 {
+
+                font-size: 2rem;
+
+            }
+
+
+            .description {
+
+                font-size: .86rem;
+
+            }
+
+        }
+
+
+        /* ==================================================
+           ACCESSIBILITÀ
+        ================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            * {
+
+                animation: none !important;
+
+                transition: none !important;
+
+            }
+
+        }
+
+    </style>
 
 </head>
-
 
 
 <body>
 
 
-<a class="skip-link"
-href="#main-content">
+    <main class="maintenance">
 
 
+        <!-- ==================================================
+             LOGO
+        ================================================== -->
 
-</a>
+        <img
+            class="logo"
+            src="assets/img/logo.png"
+            alt="Logo Consulta Giovanile">
 
 
+        <!-- ==================================================
+             STATO
+        ================================================== -->
 
+        <div class="badge">
 
+            <span class="badge-dot"></span>
 
-<!-- ======================================================
-     HEADER / NAVBAR
-====================================================== -->
+            Sito temporaneamente non disponibile
 
+        </div>
 
-<header class="header">
 
+        <!-- ==================================================
+             TITOLO
+        ================================================== -->
 
-<nav class="navbar">
+        <h1>
 
+            Torneremo
+            <span>presto online.</span>
 
-<div class="container nav-container">
+        </h1>
 
 
+        <!-- ==================================================
+             DESCRIZIONE
+        ================================================== -->
 
-<!-- LOGO -->
+        <p class="description">
 
-<a href="#hero"
-class="logo"
-aria-label="Home">
+            Il sito ufficiale della Consulta Giovanile di
+            Castronuovo di Sant'Andrea è momentaneamente
+            non disponibile.
 
+            <br><br>
 
-<img src="assets/img/logo.png"
-alt="Logo Consulta Giovanile">
+            Stiamo effettuando alcuni aggiornamenti per
+            offrirti un'esperienza migliore.
 
+        </p>
 
-</a>
 
+        <!-- ==================================================
+             PROSSIMAMENTE
+        ================================================== -->
 
+        <div class="coming-soon">
 
+            Prossimamente online
 
-<!-- MENU DESKTOP -->
+            <strong>
 
-<ul class="nav-menu"
-id="nav-menu">
+                Consulta Giovanile
+                Castronuovo di Sant'Andrea
 
+            </strong>
 
-<li>
-<a href="#hero">
-Home
-</a>
-</li>
+        </div>
 
 
-<li>
-<a href="#about">
-Chi siamo
-</a>
-</li>
+        <!-- ==================================================
+             FOOTER
+        ================================================== -->
 
+        <footer>
 
-<li>
-<a href="#mission">
-Missione
-</a>
-</li>
+            © 2026 Consulta Giovanile
+            Castronuovo di Sant'Andrea (PZ)
 
+        </footer>
 
-<li>
-<a href="#activities">
-Attività
-</a>
-</li>
 
-
-<li>
-<a href="#events">
-Eventi
-</a>
-</li>
-
-
-<li>
-<a href="#news">
-News
-</a>
-</li>
-
-
-<li>
-<a href="#gallery">
-Galleria
-</a>
-</li>
-
-
-<li>
-<a href="#surveys">
-Sondaggi
-</a>
-</li>
-
-
-<li>
-<a href="#faq">
-FAQ
-</a>
-</li>
-
-
-<li>
-<a href="#contacts">
-Contatti
-</a>
-</li>
-
-
-</ul>
-
-
-
-
-
-<!-- HAMBURGER MOBILE -->
-
-
-<button class="hamburger"
-id="hamburger"
-aria-label="Apri menu"
-aria-expanded="false"
-aria-controls="nav-menu">
-
-
-<span></span>
-
-<span></span>
-
-<span></span>
-
-
-</button>
-
-
-
-</div>
-
-
-</nav>
-
-
-</header>
-
-
-
-
-
-
-<main id="main-content">
-
-
-
-
-
-<!-- ======================================================
-     HERO
-====================================================== -->
-
-
-<section id="hero"
-class="hero">
-
-
-
-<div class="hero-overlay"></div>
-
-
-
-<div class="container hero-container">
-
-
-
-<div class="hero-text">
-
-
-
-<span class="hero-badge">
-
-<i class="fa-solid fa-users"></i>
-
-Consulta Giovanile
-
-</span>
-
-
-
-
-
-<h1>
-
-Consulta Giovanile
-
-<br>
-
-Castronuovo di Sant'Andrea
-
-<span>(PZ)</span>
-
-</h1>
-
-
-
-
-<p>
-
-Uno spazio dedicato ai giovani, alle idee e alla partecipazione
-attiva per costruire insieme il futuro della nostra comunità.
-
-</p>
-
-
-
-
-<div class="hero-buttons">
-
-
-<a href="#about"
-class="btn btn-primary">
-
-Scopri di più
-
-</a>
-
-
-
-<a href="#activities"
-class="btn btn-secondary">
-
-Le nostre attività
-
-</a>
-
-
-</div>
-
-
-
-
-
-<div class="hero-stats">
-
-
-<div class="stat">
-
-<strong>
-Giovani
-</strong>
-
-<span>
-Partecipazione
-</span>
-
-</div>
-
-
-
-<div class="stat">
-
-<strong>
-Eventi
-</strong>
-
-<span>
-Territorio
-</span>
-
-</div>
-
-
-
-<div class="stat">
-
-<strong>
-Progetti
-</strong>
-
-<span>
-Comunità
-</span>
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-<!-- FOTO PAESE -->
-
-
-<div class="hero-image">
-
-
-<img src="https://www.ilmioviaggioinbasilicata.it/wp-content/uploads/2024/01/Castronuovo-di-SantAndrea.jpg"
-alt="Panorama di Castronuovo di Sant'Andrea"
-loading="eager">
-
-
-</div>
-
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- ======================================================
-     ACCESSO RAPIDO
-====================================================== -->
-
-
-<section id="quick-links"
-class="quick-links">
-
-
-<div class="container">
-
-
-
-<div class="section-title">
-
-
-<span>
-Navigazione rapida
-</span>
-
-
-<h2>
-Esplora il sito
-</h2>
-
-
-<p>
-Accedi rapidamente alle principali sezioni della Consulta Giovanile.
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="quick-grid">
-
-
-
-
-
-<a href="#about"
-class="quick-card">
-
-
-<i class="fa-solid fa-users"></i>
-
-
-<h3>
-Chi siamo
-</h3>
-
-
-<p>
-Scopri la Consulta Giovanile.
-</p>
-
-
-</a>
-
-
-
-
-
-
-<a href="#mission"
-class="quick-card">
-
-
-<i class="fa-solid fa-bullseye"></i>
-
-
-<h3>
-Missione
-</h3>
-
-
-<p>
-I nostri obiettivi.
-</p>
-
-
-</a>
-
-
-
-
-
-
-<a href="#activities"
-class="quick-card">
-
-
-<i class="fa-solid fa-calendar-check"></i>
-
-
-<h3>
-Attività
-</h3>
-
-
-<p>
-Le iniziative.
-</p>
-
-
-</a>
-
-
-
-
-
-
-<a href="#events"
-class="quick-card">
-
-
-<i class="fa-solid fa-calendar-days"></i>
-
-
-<h3>
-Eventi
-</h3>
-
-
-<p>
-Partecipa.
-</p>
-
-
-</a>
-
-
-
-
-
-
-<a href="#news"
-class="quick-card">
-
-
-<i class="fa-solid fa-newspaper"></i>
-
-
-<h3>
-News
-</h3>
-
-
-<p>
-Aggiornamenti.
-</p>
-
-
-</a>
-
-
-
-
-
-
-<a href="#gallery"
-class="quick-card">
-
-
-<i class="fa-solid fa-images"></i>
-
-
-<h3>
-Galleria
-</h3>
-
-
-<p>
-Foto e ricordi.
-</p>
-
-
-</a>
-
-
-
-
-
-
-<a href="#surveys"
-class="quick-card">
-
-
-<i class="fa-solid fa-square-poll-horizontal"></i>
-
-
-<h3>
-Sondaggi
-</h3>
-
-
-<p>
-La tua opinione.
-</p>
-
-
-</a>
-
-
-
-
-
-
-<a href="#contacts"
-class="quick-card">
-
-
-<i class="fa-solid fa-envelope"></i>
-
-
-<h3>
-Contatti
-</h3>
-
-
-<p>
-Scrivici.
-</p>
-
-
-</a>
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-<!-- ======================================================
-     CHI SIAMO
-====================================================== -->
-
-
-<section id="about"
-class="about section">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-
-<span>
-Chi siamo
-</span>
-
-
-<h2>
-La Consulta Giovanile
-</h2>
-
-
-<p>
-Un organismo di partecipazione che valorizza il ruolo dei giovani
-nella vita sociale, culturale e istituzionale del territorio.
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="about-grid">
-
-
-
-<div class="about-text">
-
-
-<h3>
-Un punto di riferimento per i giovani del territorio
-</h3>
-
-
-
-<p>
-
-La Consulta Giovanile di Castronuovo di Sant'Andrea nasce con
-l'obiettivo di coinvolgere i giovani nella vita della comunità,
-promuovendo partecipazione, confronto e cittadinanza attiva.
-
-</p>
-
-
-
-<p>
-
-Attraverso iniziative, eventi, progetti e collaborazioni con
-il Comune e le associazioni locali, la Consulta favorisce la
-crescita personale dei ragazzi e contribuisce allo sviluppo
-sociale e culturale del paese.
-
-</p>
-
-
-
-
-
-<div class="about-features">
-
-
-
-<div class="feature">
-
-<i class="fa-solid fa-users"></i>
-
-<div>
-
-<h4>
-Partecipazione
-</h4>
-
-<p>
-I giovani diventano protagonisti della comunità.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-
-<div class="feature">
-
-<i class="fa-solid fa-lightbulb"></i>
-
-<div>
-
-<h4>
-Progetti
-</h4>
-
-<p>
-Idee concrete per valorizzare il territorio.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-
-<div class="feature">
-
-<i class="fa-solid fa-handshake"></i>
-
-<div>
-
-<h4>
-Collaborazione
-</h4>
-
-<p>
-Lavoriamo insieme al Comune e alle associazioni.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div class="about-card">
-
-
-<img src="assets/img/logo.png"
-alt="Consulta Giovanile">
-
-
-<div class="about-card-content">
-
-
-<h3>
-La nostra missione
-</h3>
-
-
-<p>
-
-Creare uno spazio aperto, inclusivo e partecipativo,
-capace di ascoltare le idee dei giovani e trasformarle
-in opportunità concrete per tutta la comunità.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- ======================================================
-     MISSIONE
-====================================================== -->
-
-
-<section id="mission"
-class="mission section">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-
-<span>
-Missione
-</span>
-
-
-<h2>
-I nostri obiettivi
-</h2>
-
-
-<p>
-La Consulta Giovanile opera per rendere i giovani protagonisti
-della vita sociale, culturale e istituzionale del territorio.
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="mission-grid">
-
-
-
-
-
-<div class="mission-card">
-
-
-<i class="fa-solid fa-users"></i>
-
-
-<h3>
-Partecipazione
-</h3>
-
-
-<p>
-
-Favorire il coinvolgimento attivo dei giovani nella vita del paese,
-dando voce alle loro idee e proposte.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="mission-card">
-
-
-<i class="fa-solid fa-lightbulb"></i>
-
-
-<h3>
-Innovazione
-</h3>
-
-
-<p>
-
-Promuovere progetti innovativi che valorizzino il territorio,
-la creatività e le competenze delle nuove generazioni.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="mission-card">
-
-
-<i class="fa-solid fa-handshake"></i>
-
-
-<h3>
-Collaborazione
-</h3>
-
-
-<p>
-
-Collaborare con il Comune, le associazioni e le realtà locali
-per costruire iniziative condivise.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="mission-card">
-
-
-<i class="fa-solid fa-seedling"></i>
-
-
-<h3>
-Crescita
-</h3>
-
-
-<p>
-
-Creare opportunità di formazione, volontariato,
-cultura e sviluppo personale.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="mission-card">
-
-
-<i class="fa-solid fa-earth-europe"></i>
-
-
-<h3>
-Territorio
-</h3>
-
-
-<p>
-
-Valorizzare Castronuovo di Sant'Andrea attraverso eventi,
-iniziative culturali e attività sociali.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="mission-card">
-
-
-<i class="fa-solid fa-heart"></i>
-
-
-<h3>
-Comunità
-</h3>
-
-
-<p>
-
-Rafforzare il senso di appartenenza, inclusione
-e partecipazione.
-
-</p>
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- ======================================================
-     ATTIVITÀ
-====================================================== -->
-
-
-<section id="activities"
-class="activities section">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-
-<span>
-Attività
-</span>
-
-
-<h2>
-Cosa facciamo
-</h2>
-
-
-<p>
-
-La Consulta Giovanile promuove iniziative concrete
-per favorire la partecipazione dei giovani.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="timeline">
-
-
-
-
-
-<div class="timeline-item">
-
-
-<div class="timeline-icon">
-
-<i class="fa-solid fa-users"></i>
-
-</div>
-
-
-<div class="timeline-content">
-
-
-<h3>
-Assemblee e incontri
-</h3>
-
-
-<p>
-
-Organizziamo incontri periodici aperti ai giovani
-per raccogliere idee e progettare nuove iniziative.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="timeline-item">
-
-
-<div class="timeline-icon">
-
-<i class="fa-solid fa-calendar-days"></i>
-
-</div>
-
-
-<div class="timeline-content">
-
-
-<h3>
-Eventi sul territorio
-</h3>
-
-
-<p>
-
-Collaboriamo nell'organizzazione di manifestazioni,
-attività culturali, sportive e ricreative.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="timeline-item">
-
-
-<div class="timeline-icon">
-
-<i class="fa-solid fa-lightbulb"></i>
-
-</div>
-
-
-<div class="timeline-content">
-
-
-<h3>
-Nuovi progetti
-</h3>
-
-
-<p>
-
-Sviluppiamo idee innovative per rendere il paese
-più dinamico e vicino ai giovani.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="timeline-item">
-
-
-<div class="timeline-icon">
-
-<i class="fa-solid fa-handshake"></i>
-
-</div>
-
-
-<div class="timeline-content">
-
-
-<h3>
-Collaborazioni
-</h3>
-
-
-<p>
-
-Lavoriamo insieme al Comune, alle associazioni
-e agli enti locali.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div class="timeline-item">
-
-
-<div class="timeline-icon">
-
-<i class="fa-solid fa-comments"></i>
-
-</div>
-
-
-<div class="timeline-content">
-
-
-<h3>
-Ascolto dei giovani
-</h3>
-
-
-<p>
-
-Raccogliamo proposte e suggerimenti attraverso
-momenti di confronto e partecipazione.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- ======================================================
-     EVENTI
-====================================================== -->
-
-
-<section id="events"
-class="events section">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-
-<span>
-Eventi
-</span>
-
-
-<h2>
-Prossimi appuntamenti
-</h2>
-
-
-<p>
-
-Rimani aggiornato sugli eventi organizzati dalla Consulta
-Giovanile.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="events-grid">
-
-
-
-
-
-<article class="event-card">
-
-
-
-<div class="event-date">
-
-
-<span class="day">
-25
-</span>
-
-
-<span class="month">
-LUG
-</span>
-
-
-</div>
-
-
-
-
-<img src="assets/img/event1.jpg"
-alt="Assemblea dei Giovani">
-
-
-
-
-
-<div class="event-content">
-
-
-<h3>
-Assemblea dei Giovani
-</h3>
-
-
-<p>
-
-Incontro aperto alla cittadinanza per raccogliere
-idee e proposte future.
-
-</p>
-
-
-
-<div class="event-info">
-
-
-<span>
-
-<i class="fa-solid fa-location-dot"></i>
-
-Sala Consiliare
-
-</span>
-
-
-<span>
-
-<i class="fa-solid fa-clock"></i>
-
-Ore 18:00
-
-</span>
-
-
-</div>
-
-
-
-<a href="#"
-class="btn btn-primary">
-
-Scopri di più
-
-</a>
-
-
-
-</div>
-
-
-</article>
-
-
-
-
-
-
-<article class="event-card">
-
-
-
-<div class="event-date">
-
-
-<span class="day">
-10
-</span>
-
-
-<span class="month">
-AGO
-</span>
-
-
-</div>
-
-
-
-
-<img src="assets/img/event2.jpg"
-alt="Serata Giovani">
-
-
-
-
-
-<div class="event-content">
-
-
-<h3>
-Serata Giovani
-</h3>
-
-
-<p>
-
-Un momento di aggregazione con musica,
-attività e intrattenimento.
-
-</p>
-
-
-
-<div class="event-info">
-
-
-<span>
-
-<i class="fa-solid fa-location-dot"></i>
-
-Piazza del Comune
-
-</span>
-
-
-<span>
-
-<i class="fa-solid fa-clock"></i>
-
-Ore 21:00
-
-</span>
-
-
-</div>
-
-
-
-<a href="#"
-class="btn btn-primary">
-
-Scopri di più
-
-</a>
-
-
-
-</div>
-
-
-</article>
-
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-<!-- ======================================================
-     NEWS
-====================================================== -->
-
-
-<section id="news"
-class="news section">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-
-<span>
-Ultime notizie
-</span>
-
-
-<h2>
-News dalla Consulta
-</h2>
-
-
-<p>
-
-Tutte le novità, gli aggiornamenti e le iniziative
-della Consulta Giovanile.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="news-grid">
-
-
-
-
-
-<article class="news-card">
-
-
-<div class="news-image">
-
-
-<img src="assets/img/news1.jpg"
-alt="Nuova Consulta Giovanile"
-loading="lazy">
-
-
-<span class="news-date">
-18 Luglio 2026
-</span>
-
-
-</div>
-
-
-
-
-
-<div class="news-content">
-
-
-<h3>
-Nasce la nuova Consulta Giovanile
-</h3>
-
-
-<p>
-
-Presentazione ufficiale del nuovo organismo
-dedicato alla partecipazione dei giovani
-di Castronuovo di Sant'Andrea.
-
-</p>
-
-
-
-<a href="#"
-class="news-link">
-
-Leggi tutto
-
-<i class="fa-solid fa-arrow-right"></i>
-
-</a>
-
-
-
-</div>
-
-
-</article>
-
-
-
-
-
-
-
-<article class="news-card">
-
-
-<div class="news-image">
-
-
-<img src="assets/img/news2.jpg"
-alt="Evento Consulta"
-loading="lazy">
-
-
-<span class="news-date">
-05 Agosto 2026
-</span>
-
-
-</div>
-
-
-
-
-
-<div class="news-content">
-
-
-<h3>
-Nuove iniziative sul territorio
-</h3>
-
-
-<p>
-
-La Consulta presenta le prossime attività
-dedicate ai giovani e alla comunità.
-
-</p>
-
-
-
-<a href="#"
-class="news-link">
-
-Leggi tutto
-
-<i class="fa-solid fa-arrow-right"></i>
-
-</a>
-
-
-
-</div>
-
-
-</article>
-
-
-
-
-
-
-
-<article class="news-card">
-
-
-<div class="news-image">
-
-
-<img src="assets/img/news3.jpg"
-alt="Progetto giovani"
-loading="lazy">
-
-
-<span class="news-date">
-20 Agosto 2026
-</span>
-
-
-</div>
-
-
-
-
-
-<div class="news-content">
-
-
-<h3>
-Nuovi progetti per i giovani
-</h3>
-
-
-<p>
-
-Idee e proposte per rendere sempre più
-attiva la partecipazione giovanile.
-
-</p>
-
-
-
-<a href="#"
-class="news-link">
-
-Leggi tutto
-
-<i class="fa-solid fa-arrow-right"></i>
-
-</a>
-
-
-
-</div>
-
-
-</article>
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- ======================================================
-     GALLERIA
-====================================================== -->
-
-<section id="gallery" class="gallery section">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-<span>
-Galleria
-</span>
-
-<h2>
-Le nostre foto
-</h2>
-
-<p>
-Rivivi gli eventi e le attività della Consulta Giovanile
-attraverso la nostra raccolta fotografica.
-</p>
-
-</div>
-
-
-
-
-<div class="gallery-box">
-
-
-<i class="fa-solid fa-images"></i>
-
-
-<h3>
-Archivio fotografico
-</h3>
-
-
-<p>
-
-Consulta tutte le immagini degli eventi,
-delle iniziative e dei momenti più importanti
-della Consulta Giovanile.
-
-</p>
-
-
-
-<a href="INSERISCI_LINK_GOOGLE_DRIVE"
-target="_blank"
-class="btn btn-primary">
-
-<i class="fa-brands fa-google-drive"></i>
-
-Apri la galleria fotografica
-
-</a>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- ======================================================
-     SONDAGGI
-====================================================== -->
-
-
-<section id="surveys"
-class="surveys section">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-
-<span>
-Sondaggi
-</span>
-
-
-<h2>
-La tua opinione conta
-</h2>
-
-
-<p>
-
-Aiutaci a capire le esigenze dei giovani
-attraverso questionari e consultazioni.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="survey-grid">
-
-
-
-
-
-<div class="survey-card">
-
-
-<i class="fa-solid fa-calendar-check"></i>
-
-
-<h3>
-Quali eventi vorresti?
-</h3>
-
-
-<p>
-
-Dicci quali iniziative culturali,
-sportive o ricreative preferisci.
-
-</p>
-
-
-<span>
-Sondaggio in preparazione
-</span>
-
-
-<a href="#"
-class="btn btn-primary">
-
-Partecipa
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="survey-card">
-
-
-<i class="fa-solid fa-lightbulb"></i>
-
-
-<h3>
-Idee per il paese
-</h3>
-
-
-<p>
-
-Proponi nuove idee per migliorare
-Castronuovo.
-
-</p>
-
-
-<span>
-Sondaggio in preparazione
-</span>
-
-
-<a href="#"
-class="btn btn-primary">
-
-Partecipa
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="survey-card">
-
-
-<i class="fa-solid fa-users"></i>
-
-
-<h3>
-Spazio ai giovani
-</h3>
-
-
-<p>
-
-Raccontaci cosa ti aspetti
-dalla Consulta.
-
-</p>
-
-
-<span>
-Sondaggio in preparazione
-</span>
-
-
-<a href="#"
-class="btn btn-primary">
-
-Partecipa
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- ======================================================
-     FAQ
-====================================================== -->
-
-<section id="faq" class="faq section">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-<span>
-FAQ
-</span>
-
-<h2>
-Domande frequenti
-</h2>
-
-<p>
-Tutto quello che devi sapere sulla Consulta Giovanile.
-</p>
-
-</div>
-
-
-
-
-<div class="faq-container">
-
-
-<div class="faq-item">
-
-
-<button class="faq-question">
-
-<span>
-Che cos'è la Consulta Giovanile?
-</span>
-
-<i class="fa-solid fa-plus"></i>
-
-</button>
-
-
-<div class="faq-answer">
-
-<p>
-La Consulta Giovanile è un organismo di partecipazione
-che permette ai giovani di proporre idee e collaborare
-alla vita della comunità.
-</p>
-
-</div>
-
-
-</div>
-
-
-
-
-
-<div class="faq-item">
-
-
-<button class="faq-question">
-
-<span>
-Chi può partecipare?
-</span>
-
-<i class="fa-solid fa-plus"></i>
-
-</button>
-
-
-<div class="faq-answer">
-
-<p>
-Possono partecipare tutti i giovani interessati
-a contribuire alle attività e ai progetti.
-</p>
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div class="faq-item">
-
-
-<button class="faq-question">
-
-<span>
-Come posso proporre un'idea?
-</span>
-
-<i class="fa-solid fa-plus"></i>
-
-</button>
-
-
-<div class="faq-answer">
-
-<p>
-Puoi contattarci attraverso la sezione Contatti
-oppure partecipare agli incontri della Consulta.
-</p>
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div class="faq-item">
-
-
-<button class="faq-question">
-
-<span>
-La partecipazione è gratuita?
-</span>
-
-<i class="fa-solid fa-plus"></i>
-
-</button>
-
-
-<div class="faq-answer">
-
-<p>
-Sì, la partecipazione alla Consulta è libera
-e aperta ai giovani interessati.
-</p>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-<!-- ======================================================
-     CONTATTI
-====================================================== -->
-
-
-<section id="contacts"
-class="contacts section">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-
-<span>
-Contatti
-</span>
-
-
-<h2>
-Parla con noi
-</h2>
-
-
-<p>
-
-Hai un'idea, una proposta o vuoi partecipare?
-Contattaci.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="contact-grid">
-
-
-
-
-
-<div class="contact-card">
-
-
-<i class="fa-solid fa-envelope"></i>
-
-
-<h3>
-Email
-</h3>
-
-
-<p>
-consulta.giovanile@email.it
-</p>
-
-
-<a href="mailto:consulta.giovanile@email.it"
-class="btn btn-primary">
-
-Scrivici
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="contact-card">
-
-
-<i class="fa-solid fa-location-dot"></i>
-
-
-<h3>
-Sede
-</h3>
-
-
-<p>
-
-Castronuovo di Sant'Andrea (PZ)
-
-</p>
-
-
-<a href="#"
-class="btn btn-primary">
-
-Indicazioni
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="contact-card">
-
-
-<i class="fa-solid fa-share-nodes"></i>
-
-
-<h3>
-Social
-</h3>
-
-
-<p>
-
-Seguici per rimanere aggiornato
-sulle iniziative.
-
-</p>
-
-
-<div class="social-links">
-
-
-<a href="#"
-aria-label="Facebook">
-
-<i class="fa-brands fa-facebook-f"></i>
-
-</a>
-
-
-<a href="#"
-aria-label="Instagram">
-
-<i class="fa-brands fa-instagram"></i>
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- ======================================================
-     FOOTER
-====================================================== -->
-
-
-<footer class="footer">
-
-
-<div class="container">
-
-
-
-<div class="footer-grid">
-
-
-
-
-
-<div class="footer-column">
-
-
-<img src="assets/img/logo.png"
-class="footer-logo"
-alt="Logo Consulta Giovanile">
-
-
-
-<h3>
-Consulta Giovanile
-</h3>
-
-
-<p>
-
-Uno spazio dedicato ai giovani,
-alla partecipazione e alla crescita
-della comunità.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="footer-column">
-
-
-<h3>
-Link rapidi
-</h3>
-
-
-<ul>
-
-
-<li>
-<a href="#about">
-Chi siamo
-</a>
-</li>
-
-
-<li>
-<a href="#activities">
-Attività
-</a>
-</li>
-
-
-<li>
-<a href="#events">
-Eventi
-</a>
-</li>
-
-
-<li>
-<a href="#news">
-News
-</a>
-</li>
-
-
-</ul>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="footer-column">
-
-
-<h3>
-Informazioni
-</h3>
-
-
-<ul>
-
-
-<li>
-<a href="#gallery">
-Galleria
-</a>
-</li>
-
-
-<li>
-<a href="#surveys">
-Sondaggi
-</a>
-</li>
-
-
-<li>
-<a href="#faq">
-FAQ
-</a>
-</li>
-
-
-<li>
-<a href="#contacts">
-Contatti
-</a>
-</li>
-
-
-</ul>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="footer-column">
-
-
-<h3>
-Seguici
-</h3>
-
-
-
-<div class="social-links">
-
-
-<a href="#">
-
-<i class="fa-brands fa-facebook-f"></i>
-
-</a>
-
-
-
-<a href="#">
-
-<i class="fa-brands fa-instagram"></i>
-
-</a>
-
-
-
-<a href="#">
-
-<i class="fa-brands fa-youtube"></i>
-
-</a>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="footer-bottom">
-
-
-<p>
-
-© <span id="currentYear"></span>
-Consulta Giovanile Castronuovo di Sant'Andrea.
-<br>
-Tutti i diritti riservati.
-
-</p>
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-</footer>
-
-
-
-
-
-
-
-
-
-<!-- ======================================================
-     BACK TO TOP
-====================================================== -->
-
-
-<button id="backToTop"
-aria-label="Torna in alto">
-
-
-<i class="fa-solid fa-arrow-up"></i>
-
-
-</button>
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ======================================================
-     JAVASCRIPT
-====================================================== -->
-
-
-<script src="script.js"></script>
-
+    </main>
 
 
 </body>
-
 
 </html>
