@@ -17,7 +17,7 @@
 <body>
   <a class="skip-link" href="#main-content">Vai al contenuto principale</a>
 
-  <!-- Loader: il logo viene caricato da assets/img/logo.png -->
+  <!-- LOADER -->
   <div id="site-loader" role="status" aria-label="Caricamento del sito">
     <div class="loader-content">
       <div class="loader-logo-wrap">
@@ -31,6 +31,7 @@
     </div>
   </div>
 
+  <!-- NAVBAR -->
   <header class="header">
     <nav class="navbar" aria-label="Navigazione principale">
       <div class="container nav-container">
@@ -38,9 +39,11 @@
           <img src="assets/img/logo.png" alt="Logo Consulta Giovanile">
           <span>Consulta <strong>Giovanile</strong></span>
         </a>
+
         <button class="hamburger" id="hamburger" type="button" aria-label="Apri menu" aria-expanded="false" aria-controls="nav-menu">
           <span></span><span></span><span></span>
         </button>
+
         <ul class="nav-menu" id="nav-menu">
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">Chi siamo</a></li>
@@ -56,32 +59,53 @@
   </header>
 
   <main id="main-content">
+
+    <!-- HERO -->
     <section class="hero" id="hero">
       <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
       <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+
       <div class="container hero-grid">
         <div class="hero-text">
           <span class="eyebrow"><span class="eyebrow-dot"></span> Una voce ai giovani</span>
+
           <h1>Le idee di oggi.<br><span>Il futuro di</span><br>Castronuovo.</h1>
+
           <p>Uno spazio di incontro, partecipazione e progettazione per dare valore alle idee dei giovani e costruire insieme la nostra comunità.</p>
+
           <div class="hero-actions">
             <a href="#about" class="btn btn-primary">Scopri la Consulta <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             <a href="#participation" class="btn btn-ghost">Partecipa <i class="fa-solid fa-users" aria-hidden="true"></i></a>
           </div>
+
           <div class="hero-note"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Castronuovo di Sant'Andrea · Basilicata</div>
         </div>
+
         <div class="hero-visual">
           <div class="hero-image-frame">
             <img src="assets/img/castronuovo.jpg" alt="Panorama di Castronuovo di Sant'Andrea" fetchpriority="high">
-            <div class="image-label"><span class="image-label-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span><span><strong>Il nostro territorio</strong><small>Radici, idee, futuro.</small></span></div>
+            <div class="image-label">
+              <span class="image-label-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+              <span><strong>Il nostro territorio</strong><small>Radici, idee, futuro.</small></span>
+            </div>
           </div>
-          <div class="floating-card floating-card-top"><span class="floating-icon"><i class="fa-regular fa-lightbulb" aria-hidden="true"></i></span><span><strong>Idee in movimento</strong><small>Proposte che diventano progetti</small></span></div>
-          <div class="floating-card floating-card-bottom"><span class="floating-icon teal"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span><span><strong>Una comunità attiva</strong><small>Il cambiamento parte da noi</small></span></div>
+
+          <div class="floating-card floating-card-top">
+            <span class="floating-icon"><i class="fa-regular fa-lightbulb" aria-hidden="true"></i></span>
+            <span><strong>Idee in movimento</strong><small>Proposte che diventano progetti</small></span>
+          </div>
+
+          <div class="floating-card floating-card-bottom">
+            <span class="floating-icon teal"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span>
+            <span><strong>Una comunità attiva</strong><small>Il cambiamento parte da noi</small></span>
+          </div>
         </div>
       </div>
+
       <a class="scroll-cue" href="#about" aria-label="Scorri alla sezione Chi siamo"><span></span> Scopri di più</a>
     </section>
 
+    <!-- QUICK STRIP -->
     <section class="quick-strip" aria-label="Esplora il sito">
       <div class="container quick-strip-inner">
         <a href="#activities"><span><i class="fa-solid fa-compass" aria-hidden="true"></i></span><b>Le attività</b><i class="fa-solid fa-arrow-up-right-from-square mini-arrow" aria-hidden="true"></i></a>
@@ -90,6 +114,7 @@
       </div>
     </section>
 
+    <!-- CHI SIAMO -->
     <section class="section about-section" id="about">
       <div class="container about-grid">
         <div class="section-heading align-left">
@@ -98,69 +123,163 @@
           <p>La Consulta Giovanile è uno spazio di partecipazione dedicato ai giovani di Castronuovo di Sant'Andrea: un punto di incontro per confrontarsi, proporre iniziative e contribuire alla vita del paese.</p>
           <a href="#participation" class="text-link">Scopri come partecipare <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
+
         <div class="about-points">
-          <article class="point-card"><span class="point-number">01</span><div><h3>Ascolto</h3><p>Raccogliere bisogni, idee e proposte dei giovani.</p></div><span class="point-icon"><i class="fa-solid fa-ear-listen" aria-hidden="true"></i></span></article>
-          <article class="point-card"><span class="point-number">02</span><div><h3>Partecipazione</h3><p>Favorire il dialogo e il coinvolgimento nella comunità.</p></div><span class="point-icon"><i class="fa-solid fa-people-arrows-left-right" aria-hidden="true"></i></span></article>
-          <article class="point-card"><span class="point-number">03</span><div><h3>Progettazione</h3><p>Trasformare le proposte in iniziative e collaborazioni.</p></div><span class="point-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></span></article>
+          <article class="point-card">
+            <span class="point-number">01</span>
+            <div><h3>Ascolto</h3><p>Raccogliere bisogni, idee e proposte dei giovani.</p></div>
+            <span class="point-icon"><i class="fa-solid fa-ear-listen" aria-hidden="true"></i></span>
+          </article>
+
+          <article class="point-card">
+            <span class="point-number">02</span>
+            <div><h3>Partecipazione</h3><p>Favorire il dialogo e il coinvolgimento nella comunità.</p></div>
+            <span class="point-icon"><i class="fa-solid fa-people-arrows-left-right" aria-hidden="true"></i></span>
+          </article>
+
+          <article class="point-card">
+            <span class="point-number">03</span>
+            <div><h3>Progettazione</h3><p>Trasformare le proposte in iniziative e collaborazioni.</p></div>
+            <span class="point-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></span>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- ORGANIGRAMMA -->
     <section class="section organigramma-section" id="organigramma">
       <div class="container">
+
         <div class="section-heading">
           <span class="section-kicker">La nostra squadra</span>
           <h2>L’organigramma <span>della Consulta.</span></h2>
           <p>Le persone e i ruoli che contribuiscono a organizzare le attività e a dare voce ai giovani di Castronuovo di Sant’Andrea.</p>
         </div>
-        <div class="organigramma-grid">
-          <article class="organigramma-card organigramma-card-featured">
-            <div class="organigramma-avatar"><i class="fa-solid fa-user-tie" aria-hidden="true"></i></div>
-            <span class="organigramma-role">Presidente</span>
-            <h3>Nome Cognome</h3>
-            <p>Coordinamento e rappresentanza della Consulta.</p>
+
+        <!-- PRESIDENTE, VICEPRESIDENTE E SEGRETARIO -->
+        <div class="org-leadership">
+
+          <article class="org-profile org-profile-president">
+            <div class="org-photo">
+              <img src="assets/img/presidente.jpg" alt="Foto del Presidente" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'">
+              <span class="org-photo-fallback">
+                <i class="fa-solid fa-user-tie" aria-hidden="true"></i>
+                <small>Foto</small>
+              </span>
+              <span class="org-photo-index">01</span>
+            </div>
+
+            <div class="org-profile-content">
+              <span class="org-role">Presidente</span>
+              <h3>Nome Cognome</h3>
+              <p>Coordinamento e rappresentanza della Consulta.</p>
+            </div>
           </article>
-          <article class="organigramma-card">
-            <div class="organigramma-avatar"><i class="fa-solid fa-user-group" aria-hidden="true"></i></div>
-            <span class="organigramma-role">Vicepresidente</span>
-            <h3>Nome Cognome</h3>
-            <p>Supporto al coordinamento delle attività.</p>
+
+          <article class="org-profile">
+            <div class="org-photo">
+              <img src="assets/img/vicepresidente.jpg" alt="Foto del Vicepresidente" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'">
+              <span class="org-photo-fallback">
+                <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+                <small>Foto</small>
+              </span>
+              <span class="org-photo-index">02</span>
+            </div>
+
+            <div class="org-profile-content">
+              <span class="org-role">Vicepresidente</span>
+              <h3>Nome Cognome</h3>
+              <p>Supporto al Presidente e coordinamento delle attività.</p>
+            </div>
           </article>
-          <article class="organigramma-card">
-            <div class="organigramma-avatar"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i></div>
-            <span class="organigramma-role">Segretario/a</span>
-            <h3>Nome Cognome</h3>
-            <p>Verbali, comunicazioni e supporto organizzativo.</p>
+
+          <article class="org-profile">
+            <div class="org-photo">
+              <img src="assets/img/segretario.jpg" alt="Foto del Segretario" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'">
+              <span class="org-photo-fallback">
+                <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
+                <small>Foto</small>
+              </span>
+              <span class="org-photo-index">03</span>
+            </div>
+
+            <div class="org-profile-content">
+              <span class="org-role">Segretario/a</span>
+              <h3>Nome Cognome</h3>
+              <p>Verbali, comunicazioni e supporto organizzativo.</p>
+            </div>
           </article>
-          <article class="organigramma-card">
-            <div class="organigramma-avatar"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div>
-            <span class="organigramma-role">Consigliere/a</span>
-            <h3>Nome Cognome</h3>
-            <p>Collaborazione alle proposte e alle iniziative.</p>
-          </article>
-          <article class="organigramma-card">
-            <div class="organigramma-avatar"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div>
-            <span class="organigramma-role">Consigliere/a</span>
-            <h3>Nome Cognome</h3>
-            <p>Collaborazione alle proposte e alle iniziative.</p>
-          </article>
+
         </div>
-        <p class="organigramma-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Sostituisci “Nome Cognome” con i nominativi ufficiali e aggiungi o rimuovi le schede in base alla composizione effettiva della Consulta.</p>
+
+        <!-- I CINQUE CONSIGLIERI -->
+        <article class="org-council-card">
+          <div class="org-council-heading">
+            <div class="org-council-icon">
+              <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+            </div>
+
+            <div>
+              <span class="org-role">Organo collegiale</span>
+              <h3>Il Consiglio</h3>
+              <p>I cinque consiglieri della Consulta Giovanile.</p>
+            </div>
+
+            <span class="org-council-count">05 <small>membri</small></span>
+          </div>
+
+          <div class="org-council-members">
+            <div class="org-council-name">
+              <span>01</span>
+              <div><h4>Nome Cognome</h4><small>Consigliere</small></div>
+            </div>
+
+            <div class="org-council-name">
+              <span>02</span>
+              <div><h4>Nome Cognome</h4><small>Consigliere</small></div>
+            </div>
+
+            <div class="org-council-name">
+              <span>03</span>
+              <div><h4>Nome Cognome</h4><small>Consigliere</small></div>
+            </div>
+
+            <div class="org-council-name">
+              <span>04</span>
+              <div><h4>Nome Cognome</h4><small>Consigliere</small></div>
+            </div>
+
+            <div class="org-council-name">
+              <span>05</span>
+              <div><h4>Nome Cognome</h4><small>Consigliere</small></div>
+            </div>
+          </div>
+        </article>
+
+        <p class="organigramma-note">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          Sostituisci “Nome Cognome” con i nominativi ufficiali. Per inserire le fotografie, aggiungi i file presidente.jpg, vicepresidente.jpg e segretario.jpg nella cartella assets/img.
+        </p>
+
       </div>
     </section>
 
+    <!-- MISSIONE -->
     <section class="section mission-section">
       <div class="container mission-panel">
         <div class="mission-mark"><i class="fa-solid fa-quote-left" aria-hidden="true"></i></div>
+
         <div class="mission-copy">
           <span class="section-kicker light">La nostra missione</span>
           <h2>Un paese cresce quando <span>ascolta i suoi giovani.</span></h2>
           <p>Promuovere cittadinanza attiva, creatività, inclusione e collaborazione, valorizzando il legame tra nuove generazioni e territorio.</p>
         </div>
+
         <div class="mission-decoration" aria-hidden="true"><span></span><span></span><span></span></div>
       </div>
     </section>
 
+    <!-- ATTIVITÀ -->
     <section class="section activities-section" id="activities">
       <div class="container">
         <div class="section-heading">
@@ -168,41 +287,96 @@
           <h2>Dalle idee <span>alle iniziative.</span></h2>
           <p>Ambiti di lavoro aperti al confronto e alle proposte della comunità giovanile.</p>
         </div>
+
         <div class="activity-grid">
-          <article class="activity-card"><div class="activity-icon blue"><i class="fa-solid fa-masks-theater" aria-hidden="true"></i></div><span class="card-index">01 / CULTURA</span><h3>Cultura e creatività</h3><p>Iniziative culturali, espressione artistica e valorizzazione delle tradizioni locali.</p><span class="card-line"></span></article>
-          <article class="activity-card"><div class="activity-icon teal"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div><span class="card-index">02 / COMUNITÀ</span><h3>Aggregazione</h3><p>Occasioni per incontrarsi, condividere esperienze e rafforzare il senso di comunità.</p><span class="card-line"></span></article>
-          <article class="activity-card"><div class="activity-icon violet"><i class="fa-solid fa-seedling" aria-hidden="true"></i></div><span class="card-index">03 / TERRITORIO</span><h3>Idee per il paese</h3><p>Proposte per rendere Castronuovo più vivo, accogliente e attento alle nuove generazioni.</p><span class="card-line"></span></article>
-          <article class="activity-card"><div class="activity-icon amber"><i class="fa-solid fa-handshake-angle" aria-hidden="true"></i></div><span class="card-index">04 / COLLABORAZIONE</span><h3>Reti e partecipazione</h3><p>Dialogo con il Comune, le associazioni e le realtà del territorio.</p><span class="card-line"></span></article>
+          <article class="activity-card">
+            <div class="activity-icon blue"><i class="fa-solid fa-masks-theater" aria-hidden="true"></i></div>
+            <span class="card-index">01 / CULTURA</span>
+            <h3>Cultura e creatività</h3>
+            <p>Iniziative culturali, espressione artistica e valorizzazione delle tradizioni locali.</p>
+            <span class="card-line"></span>
+          </article>
+
+          <article class="activity-card">
+            <div class="activity-icon teal"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div>
+            <span class="card-index">02 / COMUNITÀ</span>
+            <h3>Aggregazione</h3>
+            <p>Occasioni per incontrarsi, condividere esperienze e rafforzare il senso di comunità.</p>
+            <span class="card-line"></span>
+          </article>
+
+          <article class="activity-card">
+            <div class="activity-icon violet"><i class="fa-solid fa-seedling" aria-hidden="true"></i></div>
+            <span class="card-index">03 / TERRITORIO</span>
+            <h3>Idee per il paese</h3>
+            <p>Proposte per rendere Castronuovo più vivo, accogliente e attento alle nuove generazioni.</p>
+            <span class="card-line"></span>
+          </article>
+
+          <article class="activity-card">
+            <div class="activity-icon amber"><i class="fa-solid fa-handshake-angle" aria-hidden="true"></i></div>
+            <span class="card-index">04 / COLLABORAZIONE</span>
+            <h3>Reti e partecipazione</h3>
+            <p>Dialogo con il Comune, le associazioni e le realtà del territorio.</p>
+            <span class="card-line"></span>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- EVENTI -->
     <section class="section events-section" id="events">
       <div class="container">
         <div class="section-heading heading-row">
-          <div><span class="section-kicker">Agenda</span><h2>Eventi e <span>appuntamenti.</span></h2></div>
+          <div>
+            <span class="section-kicker">Agenda</span>
+            <h2>Eventi e <span>appuntamenti.</span></h2>
+          </div>
           <p>Qui troverai gli aggiornamenti sulle iniziative e gli incontri della Consulta.</p>
         </div>
+
         <div class="empty-state">
           <div class="empty-icon"><i class="fa-regular fa-calendar-days" aria-hidden="true"></i></div>
-          <div><span class="status-pill"><span></span> Sezione in aggiornamento</span><h3>Nuovi appuntamenti in arrivo</h3><p>Le date e i dettagli degli eventi saranno pubblicati in questa sezione appena disponibili.</p></div>
+          <div>
+            <span class="status-pill"><span></span> Sezione in aggiornamento</span>
+            <h3>Nuovi appuntamenti in arrivo</h3>
+            <p>Le date e i dettagli degli eventi saranno pubblicati in questa sezione appena disponibili.</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- NEWS -->
     <section class="section news-section" id="news">
       <div class="container">
         <div class="section-heading heading-row">
-          <div><span class="section-kicker">Dal territorio</span><h2>Le ultime <span>novità.</span></h2></div>
+          <div>
+            <span class="section-kicker">Dal territorio</span>
+            <h2>Le ultime <span>novità.</span></h2>
+          </div>
           <p>Comunicazioni, aggiornamenti e notizie dalla Consulta Giovanile.</p>
         </div>
+
         <div class="news-placeholder-grid">
-          <article class="news-placeholder"><span class="news-placeholder-icon"><i class="fa-regular fa-newspaper" aria-hidden="true"></i></span><span class="card-index">AGGIORNAMENTI</span><h3>Le notizie della Consulta</h3><p>Le comunicazioni ufficiali e le novità saranno pubblicate qui.</p></article>
-          <article class="news-placeholder news-placeholder-accent"><span class="news-placeholder-icon"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i></span><span class="card-index">COMUNICAZIONI</span><h3>Resta in contatto</h3><p>Per informazioni sulle attività puoi scriverci via e-mail.</p><a href="mailto:consultagiovanilecastronuovo@gmail.com" class="text-link">Scrivici <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></article>
+          <article class="news-placeholder">
+            <span class="news-placeholder-icon"><i class="fa-regular fa-newspaper" aria-hidden="true"></i></span>
+            <span class="card-index">AGGIORNAMENTI</span>
+            <h3>Le notizie della Consulta</h3>
+            <p>Le comunicazioni ufficiali e le novità saranno pubblicate qui.</p>
+          </article>
+
+          <article class="news-placeholder news-placeholder-accent">
+            <span class="news-placeholder-icon"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i></span>
+            <span class="card-index">COMUNICAZIONI</span>
+            <h3>Resta in contatto</h3>
+            <p>Per informazioni sulle attività puoi scriverci via e-mail.</p>
+            <a href="mailto:consultagiovanilecastronuovo@gmail.com" class="text-link">Scrivici <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- PARTECIPAZIONE -->
     <section class="section participation-section" id="participation">
       <div class="container participation-grid">
         <div class="participation-copy">
@@ -211,26 +385,42 @@
           <p>Hai una proposta, un progetto o un tema che vorresti portare all'attenzione della Consulta? Contattaci e contribuisci al dialogo con i giovani del territorio.</p>
           <a href="mailto:consultagiovanilecastronuovo@gmail.com" class="btn btn-light">Contatta la Consulta <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
+
         <div class="participation-links">
           <a class="external-card" href="INSERISCI_LINK_GOOGLE_FORMS" target="_blank" rel="noopener noreferrer">
             <span class="external-card-icon"><i class="fa-solid fa-square-poll-vertical" aria-hidden="true"></i></span>
-            <span><small>ASCOLTO E PARTECIPAZIONE</small><strong>Sondaggi e questionari</strong><em>Apri il modulo online <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></em></span>
+            <span>
+              <small>ASCOLTO E PARTECIPAZIONE</small>
+              <strong>Sondaggi e questionari</strong>
+              <em>Apri il modulo online <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></em>
+            </span>
             <i class="fa-solid fa-arrow-right external-arrow" aria-hidden="true"></i>
           </a>
+
           <a class="external-card" href="INSERISCI_LINK_PAGINA_COMUNE" target="_blank" rel="noopener noreferrer">
             <span class="external-card-icon"><i class="fa-solid fa-landmark" aria-hidden="true"></i></span>
-            <span><small>TRASPARENZA</small><strong>Albo e documenti</strong><em>Vai alla pagina del Comune <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></em></span>
+            <span>
+              <small>TRASPARENZA</small>
+              <strong>Albo e documenti</strong>
+              <em>Vai alla pagina del Comune <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></em>
+            </span>
             <i class="fa-solid fa-arrow-right external-arrow" aria-hidden="true"></i>
           </a>
+
           <a class="external-card" href="INSERISCI_LINK_GOOGLE_DRIVE" target="_blank" rel="noopener noreferrer">
             <span class="external-card-icon"><i class="fa-brands fa-google-drive" aria-hidden="true"></i></span>
-            <span><small>RICORDI E INIZIATIVE</small><strong>Galleria fotografica</strong><em>Apri l'archivio foto <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></em></span>
+            <span>
+              <small>RICORDI E INIZIATIVE</small>
+              <strong>Galleria fotografica</strong>
+              <em>Apri l'archivio foto <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></em>
+            </span>
             <i class="fa-solid fa-arrow-right external-arrow" aria-hidden="true"></i>
           </a>
         </div>
       </div>
     </section>
 
+    <!-- FAQ -->
     <section class="section faq-section" id="faq">
       <div class="container faq-grid">
         <div class="section-heading align-left">
@@ -239,37 +429,119 @@
           <p>Alcune informazioni utili sulla Consulta e su come entrare in contatto con noi.</p>
           <a href="mailto:consultagiovanilecastronuovo@gmail.com" class="text-link">Non trovi la risposta? Scrivici <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
+
         <div class="faq-list">
-          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Che cos'è la Consulta Giovanile?</span><i class="fa-solid fa-plus" aria-hidden="true"></i></button><div class="faq-answer"><p>È uno spazio di partecipazione e confronto che favorisce il coinvolgimento dei giovani nella vita sociale, culturale e istituzionale del territorio.</p></div></article>
-          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Come posso proporre un'idea?</span><i class="fa-solid fa-plus" aria-hidden="true"></i></button><div class="faq-answer"><p>Puoi scriverci all'indirizzo consultagiovanilecastronuovo@gmail.com descrivendo la tua proposta o il tema che vorresti condividere.</p></div></article>
-          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Dove trovo documenti e comunicazioni ufficiali?</span><i class="fa-solid fa-plus" aria-hidden="true"></i></button><div class="faq-answer"><p>La sezione dedicata all'albo rimanderà alla pagina pertinente del sito del Comune. Il collegamento verrà attivato quando sarà disponibile l'indirizzo definitivo.</p></div></article>
-          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Dove posso vedere le foto degli eventi?</span><i class="fa-solid fa-plus" aria-hidden="true"></i></button><div class="faq-answer"><p>La galleria rimanderà a un archivio Google Drive. Prima della pubblicazione, le immagini dovranno essere selezionate e condivise con le autorizzazioni necessarie.</p></div></article>
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Che cos'è la Consulta Giovanile?</span>
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>È uno spazio di partecipazione e confronto che favorisce il coinvolgimento dei giovani nella vita sociale, culturale e istituzionale del territorio.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Come posso proporre un'idea?</span>
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Puoi scriverci all'indirizzo consultagiovanilecastronuovo@gmail.com descrivendo la tua proposta o il tema che vorresti condividere.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Dove trovo documenti e comunicazioni ufficiali?</span>
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>La sezione dedicata all'albo rimanderà alla pagina pertinente del sito del Comune. Il collegamento verrà attivato quando sarà disponibile l'indirizzo definitivo.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Dove posso vedere le foto degli eventi?</span>
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>La galleria rimanderà a un archivio Google Drive. Prima della pubblicazione, le immagini dovranno essere selezionate e condivise con le autorizzazioni necessarie.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- CONTATTI -->
     <section class="section contact-section" id="contacts">
       <div class="container contact-panel">
-        <div><span class="section-kicker light">Contatti</span><h2>Parliamone.</h2><p>Per informazioni, proposte e collaborazioni, puoi contattare la Consulta via e-mail.</p></div>
-        <a href="mailto:consultagiovanilecastronuovo@gmail.com" class="contact-email"><span><i class="fa-regular fa-envelope" aria-hidden="true"></i></span><span><small>Scrivici a</small><strong>consultagiovanilecastronuovo@gmail.com</strong></span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        <div>
+          <span class="section-kicker light">Contatti</span>
+          <h2>Parliamone.</h2>
+          <p>Per informazioni, proposte e collaborazioni, puoi contattare la Consulta via e-mail.</p>
+        </div>
+
+        <a href="mailto:consultagiovanilecastronuovo@gmail.com" class="contact-email">
+          <span><i class="fa-regular fa-envelope" aria-hidden="true"></i></span>
+          <span>
+            <small>Scrivici a</small>
+            <strong>consultagiovanilecastronuovo@gmail.com</strong>
+          </span>
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-main">
       <div class="footer-brand">
-        <a href="#hero" class="logo footer-logo"><img src="assets/img/logo.png" alt=""><span>Consulta <strong>Giovanile</strong></span></a>
+        <a href="#hero" class="logo footer-logo">
+          <img src="assets/img/logo.png" alt="">
+          <span>Consulta <strong>Giovanile</strong></span>
+        </a>
         <p>Idee, partecipazione e futuro per Castronuovo di Sant'Andrea.</p>
       </div>
-      <div class="footer-column"><h3>Esplora</h3><a href="#about">Chi siamo</a><a href="#organigramma">Organigramma</a><a href="#activities">Attività</a><a href="#events">Eventi</a><a href="#news">News</a></div>
-      <div class="footer-column"><h3>Partecipa</h3><a href="#participation">Sondaggi</a><a href="#participation">Albo e documenti</a><a href="#participation">Galleria</a><a href="#contacts">Contatti</a></div>
-      <div class="footer-column"><h3>Informazioni</h3><a href="privacy.html">Informativa privacy</a><a href="cookie.html">Informativa cookie</a><a href="#faq">Domande frequenti</a></div>
+
+      <div class="footer-column">
+        <h3>Esplora</h3>
+        <a href="#about">Chi siamo</a>
+        <a href="#organigramma">Organigramma</a>
+        <a href="#activities">Attività</a>
+        <a href="#events">Eventi</a>
+        <a href="#news">News</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Partecipa</h3>
+        <a href="#participation">Sondaggi</a>
+        <a href="#participation">Albo e documenti</a>
+        <a href="#participation">Galleria</a>
+        <a href="#contacts">Contatti</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Informazioni</h3>
+        <a href="privacy.html">Informativa privacy</a>
+        <a href="cookie.html">Informativa cookie</a>
+        <a href="#faq">Domande frequenti</a>
+      </div>
     </div>
-    <div class="container footer-bottom"><span>© <span id="currentYear"></span> Consulta Giovanile Castronuovo di Sant'Andrea</span><a href="#hero">Torna all'inizio ↑</a></div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="currentYear"></span> Consulta Giovanile Castronuovo di Sant'Andrea</span>
+      <a href="#hero">Torna all'inizio ↑</a>
+    </div>
   </footer>
 
-  <button id="backToTop" type="button" aria-label="Torna in alto"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+  <button id="backToTop" type="button" aria-label="Torna in alto">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
   <script src="script.js" defer></script>
 </body>
 </html>
